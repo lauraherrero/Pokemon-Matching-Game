@@ -1,8 +1,64 @@
-@import 'core/settings';
-@import 'core/links';
+.main{
+	text-align: center;
+}
 
-body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
-	margin: 0;
-	height: 100vh;
+.card-container{
+	width: 100%;
+	text-align: center;
+}
+
+.card-list{
+	display: flex;
+	flex-direction: row;
+}
+
+
+.card {
+	width: 120px;
+	height: 200px;
+	background-color:cyan;
+	color: white;
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.front-card {
+	width: 120px;
+	height: 200px;
+	background-color: blanchedalmond;
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.img-card {
+	width: 100px;
+	height: 150px;
+	align-self: center;
+}
+
+.text-card{
+	width: 100px;
+	height: 150px;
+	justify-content: center;
+	text-align: center;
+}
+
+.button{
+	height: 20px;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: cyan;
+	color: black;
+	text-align: center;
+	font-weight: 700;
+}
+.hidden {
+	display: none;
 }

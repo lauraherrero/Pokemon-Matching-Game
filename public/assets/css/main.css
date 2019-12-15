@@ -1,17 +1,83 @@
-.link__adalab:hover {
-  background-color: #099d8d;
-  color: #fff;
+.main {
+  text-align: center;
 }
 
-.link__github:hover {
-  background-color: #CCC;
-  color: #000;
+.card-container {
+  width: 100%;
+  text-align: center;
 }
 
-body {
-  background: url("../images/logo-adalab-80px.png") center center no-repeat #f3f4f5;
-  margin: 0;
-  height: 100vh;
+.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.card {
+  width: 120px;
+  height: 200px;
+  background-color: cyan;
+  color: white;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.front-card {
+  width: 120px;
+  height: 200px;
+  background-color: blanchedalmond;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img-card {
+  width: 100px;
+  height: 150px;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.text-card {
+  width: 100px;
+  height: 150px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button {
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: cyan;
+  color: black;
+  text-align: center;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

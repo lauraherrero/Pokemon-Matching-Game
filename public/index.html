@@ -4,19 +4,32 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Adalab Web Starter Kit</title>
+        <title>El juego de las parejas</title>
         <link rel="icon" href="./favicon.png" />
         <link rel="stylesheet" href="./assets/css/main.css" />
     </head>
     
     <body>
-        <div class="page">
-            <header class="page__header">Header</header>
-            <main class="page__main">Main</main> <a class="link__adalab" href="https://adalab.es" target="_blank">Adalab</a>
+        <main class="main">
+             <h1 class="main__title">El juego de las parejas</h1>
 
-            <a
-            class="link__github" href="https://github.com" target="_blank">GitHub</a>
-        </div>
+            <form action="" method="POST" class="form" id="form">
+                <label for="option-four"></label>
+                <input type="radio" id="optionFour" class="option" name="option"
+                value="4">4
+                <label for="option-six"></label>
+                <input type="radio" id="optionSix" class="option" name="option"
+                value="6">6
+                <label for="option-eight"></label>
+                <input type="radio" id="optionEight" class="option" name="option"
+                value="8">8
+                <button class="button" id="button" type="button">Comenzar</button>
+            </form>
+            <div class="card-container" id="card-container">
+                <ul class="card-list" id="card-list"></ul>
+            </div>
+        </main>
+        <script type="text/javascript" src="./assets/js/main.js"></script>
     </body>
 
 </html>
