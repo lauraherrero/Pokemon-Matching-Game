@@ -4,9 +4,13 @@ const elementContainer = document.querySelector('#card-container');
 const elementList = document.querySelector('#card-list');
 const elementButton = document.querySelector('#button');
 elementButton.classList.add('button');
+const inputFour = document.querySelector('#optionFour');
+const inputSix = document.querySelector('#optionSix');
+const inputEight = document.querySelector('#optionEight');
 const elementInputs = document.querySelectorAll('.option');
 const elementSubmitForm = document.querySelector('#form');
 let optionSelected ='';
+
 
 
 
@@ -55,6 +59,20 @@ const frontCards = (event) => {
   selectCard.lastChild.classList.add('hidden');
 }
 
+const getInputsSelect = () =>  {
+  const myLocalStorage = localStorage.getItem("number");
+  if(myLocalStorage === '4'){
+    inputFour.setAttribute('checked', true);
+    localStorage.setItem("number", 4);
+  } else if (myLocalStorage === '6'){
+    inputSix.setAttribute('checked', true);
+    localStorage.setItem("number", 6);
+  } else if (myLocalStorage === '8'){
+    inputEight.setAttribute('checked', true);
+    localStorage.setItem("number", 8);
+  }
+}
+
 
 const getNumberCards = () => {
   for (let i = 0; i< elementInputs.length; i++ ) {
@@ -74,4 +92,5 @@ const submitHandler = (event) => {
 
 elementSubmitForm.addEventListener('keyup', submitHandler);
 elementButton.addEventListener('click', connectToApi);
+window.addEventListener('load', getInputsSelect);
 //# sourceMappingURL=main.js.map
