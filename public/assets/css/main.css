@@ -4,7 +4,6 @@
 
 .card-container {
   width: 100%;
-  text-align: center;
 }
 
 .card-list {
@@ -15,6 +14,9 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .card {
@@ -22,16 +24,25 @@
   height: 200px;
   background-color: cyan;
   color: white;
+  font-weight: 700;
   margin: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  text-align: center;
+}
+
+.card:hover {
+  color: #8a7171;
+  border: 3px solid #8a7171;
 }
 
 .front-card {
@@ -39,8 +50,11 @@
   height: 200px;
   background-color: blanchedalmond;
   margin: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -50,20 +64,15 @@
   text-align: center;
 }
 
+.front-card:hover {
+  border: 2px solid black;
+}
+
 .img-card {
   width: 100px;
   height: 150px;
   -ms-flex-item-align: center;
   align-self: center;
-}
-
-.text-card {
-  width: 100px;
-  height: 150px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .button {
@@ -78,6 +87,10 @@
 
 .hidden {
   display: none;
+}
+
+.winner {
+  border: 5px solid yellow;
 }
 
 /*# sourceMappingURL=main.css.map */

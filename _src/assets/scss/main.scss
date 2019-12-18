@@ -4,12 +4,12 @@
 
 .card-container{
 	width: 100%;
-	text-align: center;
 }
 
 .card-list{
 	display: flex;
 	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 
@@ -17,22 +17,32 @@
 	width: 120px;
 	height: 200px;
 	background-color:cyan;
+	&:hover{
+		color: rgb(138, 113, 113);
+		border: 3px solid rgb(138, 113, 113);
+	}
 	color: white;
+	font-weight: 700;
 	margin: 10px;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 5px;
-	text-align: center;
+	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
 
 .front-card {
 	width: 120px;
 	height: 200px;
 	background-color: blanchedalmond;
+	&:hover{
+		border: 2px solid black;
+	}
 	margin: 10px;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 5px;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -41,13 +51,6 @@
 	width: 100px;
 	height: 150px;
 	align-self: center;
-}
-
-.text-card{
-	width: 100px;
-	height: 150px;
-	justify-content: center;
-	text-align: center;
 }
 
 .button{
@@ -61,4 +64,8 @@
 }
 .hidden {
 	display: none;
+}
+
+.winner{
+  border:5px solid yellow;
 }

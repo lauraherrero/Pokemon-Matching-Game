@@ -10,7 +10,8 @@ const inputEight = document.querySelector('#optionEight');
 const elementInputs = document.querySelectorAll('.option');
 const elementSubmitForm = document.querySelector('#form');
 let optionSelected ='';
-
+let elementCards=[];
+let faceCards=[];
 
 
 
@@ -29,7 +30,14 @@ const connectToApi = () => {
   getNumberCards();
   fetch(`https://beta.adalab.es/ejercicios-extra/api/pokemon-cards/${optionSelected}.json`)
     .then (response => response.json())
-    .then (dataFromResponse => displayCards (dataFromResponse))
+    .then (dataFromResponse => suffleCards (dataFromResponse))
+};
+
+const suffleCards = myArray => {
+  const total = myArray.sort(function () {
+      return 0.3 - Math.random();
+  });
+  displayCards(total);
 };
 
 const displayCards = (data) =>{
@@ -48,8 +56,11 @@ const displayCards = (data) =>{
     elementCard.appendChild(elementImg);
     elementCard.appendChild(elementSpan);
     elementList.appendChild(elementCard);
-    elementCard.addEventListener('click', frontCards);
   };
+  elementCards = document.querySelectorAll('.card');
+  for(let elementCard of elementCards){
+    elementCard.addEventListener('click', frontCards);
+  }
 }
 
 const frontCards = (event) => {
@@ -57,7 +68,37 @@ const frontCards = (event) => {
   selectCard.classList.add('front-card');
   selectCard.firstChild.classList.remove('hidden');
   selectCard.lastChild.classList.add('hidden');
+  // faceCards = document.querySelectorAll('.card');
+  // for(let faceCard of faceCards){
+  //   faceCard.addEventListener('click', compareCards);
+  // }
 }
+
+
+
+// const compareCards = (event) => {
+//   const selectCard = event.currentTarget;
+//   const frontCard = selectCard.querySelector('.front-card');
+//   const backCard = selectCard.querySelector('.card');
+//   const allOfCards =  document.querySelectorAll('.card');
+//   setTimeout(function(){
+//     for (const item of allOfCards){
+//       if(item.classList.contains('winner')=== false) {
+//         if(item.classList.contains('hidden')=== false) {
+//           const viewMother = item.parentElement;
+//           const itemBack = viewMother.querySelector('.card');
+//           if (selectCard.getAttribute('data-id') !== viewMother.getAttribute('data-id')) {
+//             item.classList.toggle('hidden');
+//             itemBack.classList.toggle('hidden');
+//             frontCard.classList.toggle('hidden');
+//             backCard.classList.toggle('hidden');
+//           }
+//         }
+//       }
+//     }
+//   }, 1500);
+// }
+
 
 const getInputsSelect = () =>  {
   const myLocalStorage = localStorage.getItem("number");
